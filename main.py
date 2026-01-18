@@ -1,8 +1,8 @@
-import os
+import os # os module provides a way of using operating system dependent functionality 
 import shutil
 
 #folder paths you wwant to organize
-FOLDER_PATH = os.getcwd()  # Current working directory
+FOLDER_PATH = os.getcwd()  # getcwd() gets the current working directory
 
 #File type mappings
 FILE_TYPES = {
@@ -21,6 +21,9 @@ def create_folders(): # create folders based on file types
         if not os.path.exists(folder_path): # check if the folder already exists
             os.makedirs(folder_path) # create the folder if it doesn't exist
 
+
+# create folders first
+create_folders()
 
 # organize files
 for file in os.listdir(FOLDER_PATH): # iterate through the files in the folder
